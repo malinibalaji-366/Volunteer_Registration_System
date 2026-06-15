@@ -60,12 +60,12 @@ This project was developed as part of an internship to demonstrate full-stack we
 ```
 Volunteer_Registration_System/
 │
-├── client/
+├── frontend/
 │   ├── src/
 │   ├── public/
 │   └── package.json
 │
-├── server/
+├── backend/
 │   ├── models/
 │   ├── routes/
 │   ├── middleware/
