@@ -1,6 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
-
+import './Logim.css';
 function Login({ setIsLoggedIn }) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -23,7 +23,8 @@ function Login({ setIsLoggedIn }) {
   };
 
   return (
-    <div style={{ textAlign: "center", marginTop: "100px" }}>
+    <div className="login-container">
+      <div className="login-card">
       <h2>Admin Login</h2>
 
       <form onSubmit={handleLogin}>
@@ -42,6 +43,7 @@ function Login({ setIsLoggedIn }) {
 
         <button type="submit">Login</button>
       </form>
+    </div>
     </div>
   );
 }
