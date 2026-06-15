@@ -1,5 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
+import "./Login.css";
 
 function Login({ setIsLoggedIn }) {
   const [username, setUsername] = useState("");
@@ -23,12 +24,14 @@ function Login({ setIsLoggedIn }) {
   };
 
   return (
-    <div style={{ textAlign: "center", marginTop: "100px" }}>
-      <h2>Admin Login</h2>
-
-      <form onSubmit={handleLogin}>
-        <input
+    <div className="login-container">
+      <div className="login-card">
+        <h1>Admin Login</h1>
+        <form onSubmit={handleLogin}>
+          <input
+          type="text"
           placeholder="Username"
+          value={username}
           onChange={(e) => setUsername(e.target.value)}
         />
         <br /><br />
@@ -36,12 +39,14 @@ function Login({ setIsLoggedIn }) {
         <input
           type="password"
           placeholder="Password"
+          value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
         <br /><br />
 
         <button type="submit">Login</button>
       </form>
+    </div>
     </div>
   );
 }
